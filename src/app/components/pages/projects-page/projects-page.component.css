@@ -1,0 +1,123 @@
+.section{
+  padding-bottom: 4.5em;
+}
+
+.container{
+  width: 50%;
+}
+
+h1, p{
+  margin: 2vh 0;
+}
+
+h1{
+  margin-top: 1.25em;
+}
+
+.arrow{
+  color: whitesmoke;
+  font-size: 32px;
+}
+
+.arrowLeft{
+  animation-name: moveLeft;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveLeft{
+  from{
+    transform: translate(0,0);
+  }
+  50%{
+    transform: translate(-10px,0);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+.arrowRight{
+  animation-name: moveRight;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveRight{
+  from{
+    transform: translate(0,0);
+  }
+  50%{
+    transform: translate(10px,0);
+  }
+  100%{
+    transform: translate(0,0);
+  }
+}
+
+.fadeInFromLeft{
+  animation-name: fadeInFromLeft;
+  animation-duration: 1500ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fadeInFromLeft{
+  from{
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, -0.0rad);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate3d(0);
+  }
+}
+
+.fadeInFromRight{
+  animation-name: fadeInFromRight;
+  animation-duration: 1500ms;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes fadeInFromRight{
+  from{
+    opacity: 0;
+    transform: rotate3d(0, 1, 0, 0.0rad);
+  }
+  100%{
+    opacity: 1;
+    transform: rotate3d(0);
+  }
+}
+
+/* Less than large screen */
+@media screen and (max-width: 1279px){
+  h1{
+    margin-bottom: 7vh !important;
+  }
+  .container{
+      width: 100% !important;
+  }
+}
+
+/* Less than medium screen */
+@media screen and (max-width: 959px){
+  .arrowLeft{
+    margin-right: 50px;
+  }
+  .arrowRight{
+    margin-left: 50px;
+  }
+}
+
+/* Less than small */
+@media screen and (max-width: 599px){
+  .small-controls .arrowLeft, .small-controls .arrowRight{
+    margin: 0 35px;
+  }
+  i{
+    margin-top: 1.5em;
+    font-size: 35px;
+  }
+}

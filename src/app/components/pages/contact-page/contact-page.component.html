@@ -1,0 +1,29 @@
+<div class="bg-blue section" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <h1>Get in touch</h1>
+    <div class="container" fxLayout="column wrap">
+        <mdc-form-field>
+            <mdc-text-field class="text-input" outlined size="50" required type="text" label="Your name."
+                validationMessage="Please enter a real name."
+                pattern="^([a-zA-Z]+|[a-zA-Z]+\s{1}[a-zA-Z]{1,}|[a-zA-Z]+\s{1}[a-zA-Z]{3,}\s{1}[a-zA-Z]{1,})$"
+                helper="Enter your full name"
+                (change)="changeName($event)"></mdc-text-field>
+        </mdc-form-field>
+        <mdc-form-field>
+            <mdc-text-field class="text-input" outlined size="50" required type="email" label="Your email."
+                validationMessage="Please enter a valid email." inputmode="email"
+                pattern="([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)"
+                helper="Enter a valid email"
+                (change)="changeEmail($event)"></mdc-text-field>
+        </mdc-form-field>
+        <mdc-form-field>
+            <mdc-textarea class="text-input" id="message" outlined cols="51" rows="2" required type="text"
+                label="What would you like to tell me?" helper="I'll get back to you in no time!"
+                helperPersistent="true" resize="'none'"
+                (change)="changeMsg($event)">
+            </mdc-textarea>
+        </mdc-form-field>
+        <button mdc-button raised mdcButton class="dark-button" (click)="sendEmail()">
+            <i class="fa fa-envelope"></i>SEND
+        </button>
+    </div>
+</div>

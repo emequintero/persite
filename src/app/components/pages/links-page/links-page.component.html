@@ -1,0 +1,10 @@
+<div class="bg-light-gray section" fxLayout="column" fxLayoutAlign="center center" fxFlex>
+    <div>
+        <h1>Find me online</h1>
+    </div>
+    <div class="container" fxLayout="row wrap" fxLayoutAlign="center center">
+        <app-link 
+        *ngFor="let link of links"
+        [link]="link"></app-link>
+    </div>
+</div>

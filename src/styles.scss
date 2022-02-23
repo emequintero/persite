@@ -1,0 +1,162 @@
+// styles.scss
+@use './styles/body';
+
+@use '@material/theme' with (
+  $primary: #6200ee,
+  $secondary: #faab1a,
+  $background: #fff,
+);
+
+// MDC Typography
+@use '@material/typography/mdc-typography';
+@use '@material/typography';
+
+@use './styles/card';
+
+// MDC Button
+@use './styles/button';
+
+@use './styles/form';
+
+@use './styles/snackbar';
+
+@use '@material/elevation/mdc-elevation';
+
+@use '@material/ripple/mdc-ripple';
+
+// Angular MDC
+@use '@angular-mdc/theme/material';
+
+@font-face {
+    font-family: 'Antro Vectra';
+    src: url(./assets/fonts/Antro_Vectra.otf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    font-family: 'Montserrat';
+    font-size: 4.38em;
+    margin-bottom: 0.58em !important;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.section{
+    min-height: 100vh;
+}
+
+.bg-light-gray{
+    background-image: linear-gradient(to right, #78909b, #9eaeb6) !important;
+}
+
+.bg-blue{
+    background-image: linear-gradient(to right, #0e47a1, #266494) !important;
+}
+
+.btn-secondary{
+    background-color: #283942 !important;
+}
+
+.btn-secondary:hover{
+    background-color: #f5511e !important;
+}
+
+.bg-dark{
+    background-color: #36474f !important;
+}
+
+.bg-light{
+    background-color: #b0bfc6 !important;
+}
+
+.text-secondary{
+    color: #36474f !important;
+}
+
+.inLeft {
+    animation-name: inLeft;
+    animation-duration: 1s;
+}
+
+@keyframes inLeft {
+    from {
+        opacity: 0;
+        letter-spacing: 10vw;
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: initial;
+    }
+}
+
+.inRight {
+    animation-name: inRight;
+    animation-duration: 1s;
+}
+
+@keyframes inRight {
+    from {
+        opacity: 0;
+        letter-spacing: -10vw;
+        transform: translate(10vw, 0);
+    }
+    100% {
+        opacity: 1;
+        letter-spacing: initial;
+        transform: translate(0, 0);
+    }
+}
+
+.inLeftBlock {
+    animation-name: inLeftBlock;
+    animation-duration: 1s;
+}
+
+@keyframes inLeftBlock {
+    from {
+        opacity: 0;
+        transform: translate(-5vw, 0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+/* Less than large screen */
+@media screen and (max-width: 1279px){
+    h1{
+        font-size: 3.88em;
+    }
+}
+
+/* Less than medium screen */
+@media screen and (max-width: 959px){
+}
+
+/* Less than small */
+@media screen and (max-width: 599px){
+    .section{
+        height: fit-content;
+        padding-bottom: 2.5em;
+    }
+    h1{
+        margin-top: 1em !important;
+        font-size: 2.38em;
+    }
+}

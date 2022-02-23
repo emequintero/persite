@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class MenuLink {\n  constructor(title, route, icon) {\n    this.title = title;\n    this.route = route;\n    this.icon = icon;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

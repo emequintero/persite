@@ -1,0 +1,58 @@
+h1.logo{
+    font-family: 'Antro Vectra';
+    font-size: 10.38em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+p{
+    font-size: 32px;
+    font-family: 'Montserrat';
+    letter-spacing: 1.5px;
+}
+
+p.logo-easy-read{
+    color: rgb(228, 228, 228);
+}
+
+p.subtitle{
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.filter-white{
+    filter: invert(100%) sepia(95%) saturate(21%) hue-rotate(10deg) brightness(105%) contrast(105%);
+}
+
+/* Less than large screen */
+@media screen and (max-width: 1279px){
+    h1.logo{
+        font-size: 9.38em;
+    }
+}
+
+/* Less than medium screen */
+@media screen and (max-width: 959px){
+    h1.logo{
+        font-size: 7.38em;
+    }
+}
+
+/* Less than small */
+@media screen and (max-width: 599px){
+    .section{
+        height: fit-content;
+    }
+    h1.logo{
+        margin-top: 0.5em;
+        font-size: 3.88em;
+    }
+    p{
+        font-size: 20px;
+    }
+    p.subtitle{
+        font-size: 14px;
+        margin-bottom: 2.5em;
+    }
+}

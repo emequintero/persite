@@ -1,0 +1,10 @@
+.section{
+    padding-bottom: 4.5em;
+}
+
+/* Less than small */
+@media screen and (max-width: 599px) {
+    h1 {
+        padding: 0 15px;
+    }
+}

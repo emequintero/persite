@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Project {\n  constructor(title, url, description, collaborators) {\n    this.title = title;\n    this.url = url;\n    this.description = description;\n    this.collaborators = collaborators;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

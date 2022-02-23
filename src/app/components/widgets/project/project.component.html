@@ -1,0 +1,28 @@
+<mdc-card class="app-card" [mdcElevation]="10" fxLayout="column">
+    <mdc-card-primary-action fxFlex="auto" fxLayout="column">
+      <mdc-card-media wide [style.background-image]="'url(' + imgSource + ')'"
+      class="fadeIn"></mdc-card-media>
+      <div class="app-card__primary">
+        <h2 class="app-card__title" mdcHeadline6>{{app?.title != 'HIOS' ? (app?.title | titlecase) : app?.title}}</h2>
+        <h3 class="app-card__subtitle" mdcSubtitle2>
+          By Éme Arcángel Quintero {{app.collaborators}}
+        </h3>
+      </div>
+      <div class="app-card__secondary" mdcBody2>
+        {{app?.description}}
+      </div>
+    </mdc-card-primary-action>
+    <mdc-card-actions fxFlex="auto" fxLayout="column">
+      <mdc-card-action-buttons>
+        <div *ngIf="app?.url !== ''; then launchApp else confidentialApp"></div>
+        <ng-template #launchApp>
+          <a mdc-button mdcCardAction="button" href="{{app?.url}}" target="_blank">
+            <i class="fa fa-external-link-alt"></i> launch app</a>
+        </ng-template>
+        <ng-template #confidentialApp>
+          <a mdc-button mdcCardAction="button" disabled class="confidential-btn">
+            <i class="fa fa-window-close"></i> confidential</a>
+        </ng-template>
+      </mdc-card-action-buttons>
+    </mdc-card-actions>
+  </mdc-card>

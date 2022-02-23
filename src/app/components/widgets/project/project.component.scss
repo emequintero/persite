@@ -1,0 +1,151 @@
+@use "@material/card";
+@use "@material/theme";
+@use "@material/rtl";
+
+.app-card {
+  width: 280px;
+  height: 360px;
+  margin-top: 2vh;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mdc-card__media:first-child{
+  border-top-left-radius: initial;
+  border-top-right-radius: initial;
+  background-color: black;
+}
+
+.app-card__primary {
+  padding: 1rem;
+}
+
+.app-card__title {
+  margin: 0;
+  @include theme.prop(color, text-secondary-on-background);
+}
+
+.app-card__subtitle {
+  @include theme.prop(color, text-secondary-on-background);
+
+  margin: 0;
+}
+
+.app-card__secondary {
+  @include theme.prop(color, text-secondary-on-background);
+
+  padding: 0 1rem 8px 1rem;
+}
+
+.app-card-article {
+  padding: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-card-article-group-heading {
+  @include theme.prop(color, text-secondary-on-light);
+
+  padding: 8px 16px;
+}
+
+.app-card-article__title {
+  margin: 0 0 4px 0;
+}
+
+.app-card-article__snippet {
+  @include theme.prop(color, text-secondary-on-light);
+
+  margin: 0;
+}
+
+.app-card--photo {
+  width: 200px;
+}
+
+.app-card__media-content--with-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.app-card__media-title {
+  padding: 8px 16px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.mdc-card__action-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mdc-card__action--button{
+  width: 100%;
+}
+
+.ngx-mdc-icon {
+  color: black;
+}
+
+i{
+    margin-right: 5px !important;
+}
+
+@media only screen and (min-width: 801px) and (max-width: 960px) {
+  .app-card {
+    width: 250px;
+    height: 320px;
+  }
+  .app-card__primary{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  .app-card {
+    width: 240px;
+    height: 360px;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 600px) {
+  .app-card {
+    width: 220px;
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .app-card {
+    width: 240px;
+    height: 310px;
+  }
+  .app-card__primary{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .app-card__subtitle{
+    display: none;
+  }
+  .app-card__secondary{
+    font-size: 12px;
+  }
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

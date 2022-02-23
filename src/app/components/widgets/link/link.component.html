@@ -1,0 +1,13 @@
+<div>
+    <a href="{{link?.url}}" target="_blank" class="link">
+        <div class="capsule" [mdcElevation]="10" 
+        fxLayout="row" fxLayoutAlign="center start" fxFlex>
+            <div class="section image">
+                <img src="{{imgSource}}" />
+            </div>
+            <div class="section name">
+                <p mdcButton>{{link?.name}}</p>
+            </div>
+        </div>
+    </a>
+</div>

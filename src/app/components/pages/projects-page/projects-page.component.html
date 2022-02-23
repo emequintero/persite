@@ -1,0 +1,18 @@
+<div class="bg-blue section" fxLayout="column wrap" fxLayoutAlign="center center" fxFlex="auto">
+    <div>
+        <h1>What have I made?</h1>
+    </div>
+    <div class="container" fxLayout.gt-sm="row wrap" fxLayout.xs="column wrap" fxLayoutAlign="center center">
+        <a fxFlex.gt-sm="5" class="arrow arrowLeft" (click)="prevPage()" fxShow fxHide.xs><i
+                class="fa fa-chevron-circle-left"></i></a>
+        <app-project fxFlex.gt-sm="90" *ngFor="let app of [currentProject]"
+            [ngClass]="pageChange === 'left' ? 'fadeInFromLeft' : 'fadeInFromRight'" [app]="app"></app-project>
+        <a fxFlex.gt-sm="5" class="arrow arrowRight" (click)="nextPage()" fxShow fxHide.xs><i
+                class="fa fa-chevron-circle-right"></i></a>
+
+        <div class="small-controls" fxHide fxShow.xs>
+            <a class="arrow arrowLeft" (click)="prevPage()"><i class="fa fa-chevron-circle-left"></i></a>
+            <a class="arrow arrowRight" (click)="nextPage()"><i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+    </div>
+</div>

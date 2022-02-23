@@ -1,0 +1,8 @@
+<div class="bg-dark h-100" fxLayout="column">
+    <a *ngFor="let menuLink of menuLinks" type="button" (click)="scrollTo(menuLink.route)"
+    class="btn btn-block rounded-0 text-light btn-secondary" 
+    fxFlex fxLayout="column" fxLayoutAlign="center center">
+        <i class="{{menuLink.icon}}"></i>
+        <p>{{menuLink.title}}</p>
+    </a>
+</div>

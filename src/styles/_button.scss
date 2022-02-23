@@ -1,0 +1,20 @@
+// styles/_button.scss
+
+@use '@material/button/mdc-button';
+@use '@material/button';
+@use '@material/theme';
+@use '@material/icon-button/mdc-icon-button';
+@use '@material/icon-button/_index' as icon-button;
+
+
+.button-primary {
+  @include button.filled-accessible(theme.$primary);
+}
+
+.button-secondary {
+  @include button.filled-accessible(theme.$secondary);
+}
+
+.dark-button{
+  @include button.container-fill-color(#1486AC);
+}
